@@ -29,17 +29,17 @@ here: https://github.com/joshnh/bash_profile/blob/master/.bash_profile*
 
 ### Basic Snapshotting
 
-| Command                                                                      | Description                                                         |
-|------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| `git status`                                                                 | Check status (Detailed status)                                      |
-| `git status -s`                                                              | Short status (Summarized status)                                    |
-| `git add [file-name.txt]`                                                    | Add a file to the staging area                                      |
-| `git add -A` OR `git add .`                                                  | Add all new and changed files to the staging area                   |
-| `git commit -m "[commit message]"`                                           | Commit changes                                                      |
+| Command                                   | Description                                                         |
+|-------------------------------------------|---------------------------------------------------------------------|
+| `git status`                              | Check status (Detailed status)                                      |
+| `git status -s`                           | Short status (Summarized status)                                    |
+| `git add [file-name.txt]`                 | Add a file to the staging area                                      |
+| `git add -A` OR `git add .`               | Add all new and changed files to the staging area                   |
+| `git commit -m "[commit message]"`        | Commit changes                                                      |
 | `git commit -a -m "[commit message]"` OR `git commit -am "[commit message]"` | Combine add all & commit changes together. This skips staging area. |
-| `git rm [file-name.txt]`                                                     | Remove a file (or folder)                                           |
-| `git rm [file1.txt file2.txt *.txt]`                                         | Remove multiple files (or folder)                                   |
-| `git rm --cached -r [file1.txt]`                                             | Remove a file (or folder) from staging area                         |
+| `git rm [file-name.txt]`                  | Remove a file (or folder)                                           |
+| `git rm [file1.txt file2.txt *.txt]`      | Remove multiple files (or folder)                                   |
+| `git rm --cached -r [file1.txt]`          | Remove a file (or folder) from staging area                         |
 
 ### Branching & Merging
 
@@ -70,15 +70,15 @@ here: https://github.com/joshnh/bash_profile/blob/master/.bash_profile*
 
 ### Sharing & Updating Projects
 
-| Command                                                                           | Description                                                 |
-|-----------------------------------------------------------------------------------|-------------------------------------------------------------|
-| `git push origin [branch name]`                                                   | Push a branch to your remote repository                     |
-| `git push -u origin [branch name]`                                                | Push changes to remote repository (and remember the branch) |
-| `git push`                                                                        | Push changes to remote repository (remembered branch)       |
-| `git push origin --delete [branch name]`                                          | Delete a remote branch                                      |
-| `git pull`                                                                        | Update local repository to the newest commit                |
-| `git pull origin [branch name]`                                                   | Pull changes from remote repository                         |
-| `git remote add origin ssh://git@github.com/[username]/[repository-name].git`     | Add a remote repository                                     |
+| Command                                                              | <div style="width:400px">Description</div>                  |
+|-------------------------------------------|-------------------------------------------------------------|
+| `git push origin [branch name]`           | Push a branch to your remote repository                     |
+| `git push -u origin [branch name]`        | Push changes to remote repository (and remember the branch) |
+| `git push`                                | Push changes to remote repository (remembered branch)       |
+| `git push origin --delete [branch name]`  | Delete a remote branch                                      |
+| `git pull`                                | Update local repository to the newest commit                |
+| `git pull origin [branch name]`           | Pull changes from remote repository                         |
+| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository                                     |
 | `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH                     |
 
 ### Viewing the History & Changes
@@ -94,10 +94,10 @@ here: https://github.com/joshnh/bash_profile/blob/master/.bash_profile*
 
 ### Setup & Configurations
 
-| Command                                                                       | Description                                                              |
-|-------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| `git config --global -e`                                                      | Edit global configuration settings                                       |
-| `git config --global diff.tool vscode`                                        | Use VS Code as a diff tool                                               |
+| Command                                      | Description                                                                                               |
+|----------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| `git config --global -e`                     | Edit global configuration settings                                                                        |
+| `git config --global diff.tool vscode`       | Use VS Code as a diff tool                                                                                |
 | `git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"` | VS Code waits and performs diff action on old and new copies of the file |
-| `git difftool`                                                                | Show unstaged changes                                                    |
-| `git difftool --staged`                                                       | Show staged changes                                                      |
+| `git difftool`                               | Show unstaged changes                                                                                     |
+| `git difftool --staged`                      | Show staged changes                                                                                       |
