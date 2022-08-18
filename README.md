@@ -2,6 +2,7 @@ Git Commands
 ============
 
 ## Translated Versions
+
 - [Versão em português](READMEpt.md)
 - [Versión en español](READMEes.md)
 - [Türkçe versiyon](READMEtr.md)
@@ -11,7 +12,11 @@ ___
 
 _A list of my commonly used Git commands_
 
-*If you are interested in my Git aliases, have a look at my `.bash_profile`, found here: https://github.com/joshnh/bash_profile/blob/master/.bash_profile*
+_I copied this file from @joshnh and improved it with my own commands. If you want to see original you can view it
+here: https://github.com/joshnh/Git-Commands_
+
+*If you are interested in his Git aliases, have a look at his `.bash_profile`, found
+here: https://github.com/joshnh/bash_profile/blob/master/.bash_profile*
 
 --
 
@@ -24,13 +29,17 @@ _A list of my commonly used Git commands_
 
 ### Basic Snapshotting
 
-| Command | Description |
-| ------- | ----------- |
-| `git status` | Check status |
-| `git add [file-name.txt]` | Add a file to the staging area |
-| `git add -A` | Add all new and changed files to the staging area |
-| `git commit -m "[commit message]"` | Commit changes |
-| `git rm -r [file-name.txt]` | Remove a file (or folder) |
+| Command                              | Description                                                     |
+|--------------------------------------|-----------------------------------------------------------------|
+| `git status`                         | Check status (Detailed status)                                  |
+| `git status -s`                      | Short status (Summarized status)                                |
+| `git add [file-name.txt]`            | Add a file to the staging area                                  |
+| `git add -A` OR `git add .`          | Add all new and changed files to the staging area               |
+| `git commit -m "[commit message]"`   | Commit changes                                                  |
+| `git commit -a -m "[commit message]"` OR `git commit -am "[commit message]"` | Combine add all & commit changes together. This skips staging area. |
+| `git rm [file-name.txt]`             | Remove a file (or folder)                                       |
+| `git rm [file1.txt file2.txt *.txt]` | Remove multiple files (or folder)                               |
+| `git rm --cached -r [file1.txt]`     | Remove a file (or folder) from staging area                     |
 
 ### Branching & Merging
 
@@ -52,6 +61,13 @@ _A list of my commonly used Git commands_
 | `git stash` | Stash changes in a dirty working directory |
 | `git stash clear` | Remove all stashed entries |
 
+### Viewing the staged/unstaged changes
+
+| Command                                    | Description |
+|--------------------------------------------| ----------- |
+| `git diff`                                 | Shows unstaged changes |
+| `git diff --staged` OR `git diff --cached` | Shows staged changes |
+
 ### Sharing & Updating Projects
 
 | Command | Description |
@@ -65,11 +81,23 @@ _A list of my commonly used Git commands_
 | `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository |
 | `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH |
 
-### Inspection & Comparison
+### Viewing the History & Changes
 
-| Command | Description |
-| ------- | ----------- |
-| `git log` | View changes |
-| `git log --summary` | View changes (detailed) |
-| `git log --oneline` | View changes (briefly) |
-| `git diff [source branch] [target branch]` | Preview changes before merging |
+| Command                                   | Description                                     |
+|-------------------------------------------|-------------------------------------------------|
+| `git log`                                 | Show full history of commits                    |
+| `git log --oneline`                       | Show history (summarized version)               |
+| `git log --summary`                       | Show history (detailed version)                 |
+| `git log --reverse`                       | Lists the commits from the oldest to the newest |
+| `git log --oneline --reverse`             | Show summarized history in reverse order        |
+| `git diff [source branch] [target branch]` | Preview changes before merging                  |
+
+### Setup & Configurations
+
+| Command                                 | Description                                    |
+|-----------------------------------------|------------------------------------------------|
+| `git config --global -e`                | Edit global configuration settings             |
+| `git config --global diff.tool vscode`  | Use VS Code as a diff tool                     |
+| `git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"` | VS Code waits and performs diff action on old and new copies of the file |
+| `git difftool`                          | Show unstaged changes                          |
+| `git difftool --staged`                 | Show staged changes                            |
